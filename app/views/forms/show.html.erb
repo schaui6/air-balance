@@ -1,0 +1,184 @@
+<center>
+
+<p id="notice"><%= notice %></p>
+
+
+<h1>Steve Tuan Chau</h1>
+<h1>Air Balance - Air Diagnostic</h1><hr/>
+
+<table>
+  <tr>
+    <td>
+      <div id="header1">
+        5749 Wallace Ave<br>
+        Sacramento, CA. 95824<br>
+        (916) 470-6796 Email: stevechau1960@yahoo.com<br>
+      </div>
+    </td>
+    <td>
+      <div id="header2">
+        <strong>DATE:</strong> <%= @form.date %><br>
+        <strong>PAGE:</strong><br>
+        <strong>UNIT:</strong><br>
+      </div>
+    </td>
+  </tr>
+</table>
+
+<br>
+
+<table id="hood-data">
+  <tr>
+    <strong>KITCHEN HOOD DATA</strong>
+  </tr>
+
+  <tr>
+    <td><strong>MANUFACTURER:</strong> <%= @form.manufacturer %></td>
+    <td><strong>MODEL:</strong> <%= @form.model %></td>
+  </tr>
+
+  <tr>
+    <td><strong>HOOD SIZE:</strong> <%= @form.hood_size %></td>
+    <td><strong>LOCATION:</strong> <%= @form.location %></td>
+  </tr>
+
+</table>
+
+<br>
+<table id="exhaust">
+  <tr>
+    <strong>EXHAUST SECTION</strong>
+  </tr>
+
+  <tr>
+    <td><%= @form.e1 if @form.e1 > 0 %></td>
+    <td><%= @form.e2 if @form.e2 > 0 %></td>
+    <td><%= @form.e3 if @form.e3 > 0 %></td>
+    <td><%= @form.e4 if @form.e4 > 0 %></td>
+    <td><%= @form.e5 if @form.e5 > 0 %></td>
+  </tr>
+  
+  <tr>
+    <td><%= @form.e6 if @form.e6 > 0 %></td>
+    <td><%= @form.e7 if @form.e7 > 0 %></td>
+    <td><%= @form.e8 if @form.e8 > 0 %></td>
+    <td><%= @form.e9 if @form.e9 > 0 %></td>
+    <td><%= @form.e10 if @form.e10 > 0 %></td>
+  </tr>
+    
+  <tr>
+    <td><%= @form.e11 if @form.e11 > 0 %></td>
+    <td><%= @form.e12 if @form.e12 > 0 %></td>
+    <td><%= @form.e13 if @form.e13 > 0 %></td>
+    <td><%= @form.e14 if @form.e14 > 0 %></td>
+    <td><%= @form.e15 if @form.e15 > 0 %></td>
+  </tr>
+</table>
+
+<strong>Total = <%= @total_exhaust_cfm %> CFM</strong>
+<br>
+<br>
+
+<table id="exhaust-data">
+  <tr>
+    <td><strong>TEST VELOCITIES:</strong> <%= @fpm %> FPM</td>
+  </tr>
+
+  <tr>
+    <td><strong>FILTER SIZE:</strong> <%= @form.exhaust_filter_size_1 %>" x <%= @form.exhaust_filter_size_2 %>"</td>
+    <td><strong>MANUFACTURER:</strong> <%= @form.exhaust_filter_manufacturer %></td>
+  </tr>
+
+  <tr>
+    <td><strong>AVERAGE VELOCITY:</strong> <%= @exhaust_average_velocity.round(2) %></td>
+    <td><strong>FILTER AREA:</strong> <%= @filter_area %></td>
+    <td><strong>FILTER FACTOR:</strong> <%= @form.exhaust_filter_factor %></td>
+    <td><strong>CFM = </strong><%= @total_exhaust_cfm %> </td>
+  </tr>
+
+</table>
+
+<br>
+<table id="supply">
+  <tr>
+    <strong>SUPPLY SECTION</strong>
+  </tr>
+
+  <tr>
+    <td><%= @form.s1 if @form.s1 > 0 %></td>
+    <td><%= @form.s2 if @form.s2 > 0 %></td>
+    <td><%= @form.s3 if @form.s3 > 0 %></td>
+    <td><%= @form.s4 if @form.s4 > 0 %></td>
+    <td><%= @form.s5 if @form.s5 > 0 %></td>
+  </tr>
+  
+  <tr>
+    <td><%= @form.s6 if @form.s6 > 0 %></td>
+    <td><%= @form.s7 if @form.s7 > 0 %></td>
+    <td><%= @form.s8 if @form.s8 > 0 %></td>
+    <td><%= @form.s9 if @form.s9 > 0 %></td>
+    <td><%= @form.s10 if @form.s10 > 0 %></td>
+  </tr>
+    
+</table>
+
+<strong>Total = <%= @total_supply_cfm %> CFM</strong>
+<br>
+<br>
+
+<table id"supply-data">
+  <tr>
+    <td><strong>TEST VELOCITIES:</strong> <%= @fpm %> FPM</td>
+  </tr>
+
+  <tr>
+    <td><strong>FILTER SIZE:</strong> <%= @form.supply_filter_size_1 %>" x <%= @form.supply_filter_size_2 %>"</td>
+    <td><strong>MANUFACTURER:</strong> <%= @form.supply_filter_manufacturer %></td>
+  </tr>
+
+  <tr>
+    <td><strong>AVERAGE VELOCITY:</strong> <%= @supply_average_velocity.round(2)  %></td>
+    <td><strong>OPENING AREA:</strong> <%= @supply_opening_area %></td>
+    <td><strong>AREA FACTOR:</strong> <%= @form.supply_area_factor %></td>
+    <td><strong>CFM = </strong> <%= @total_supply_cfm %></td>
+  </tr>
+
+</table>
+
+<table id="comparison">
+  <tr>
+    <th></th>
+    <th>DESIGN DATA</th>
+    <th>TEST DATA</th>
+    <th>PERCENTAGE</th>
+  </tr>
+
+  <tr>
+    <td><strong>EXHAUST</strong></td>
+    <td><%= @form.exhaust_design_data %> CFM</td>
+    <td><%= @total_exhaust_cfm %> CFM</td>
+    <td><%= @total_exhaust_cfm / @form.exhaust_design_data + 100 %> %</td>
+  </tr>
+
+  <tr>
+    <td><strong>MAKE-UP</strong></td>
+    <td><%= @form.make_up_design_data %> CFM</td>
+    <td><%= @total_supply_cfm %> CFM</td>
+    <td><%= @total_supply_cfm / @form.make_up_design_data + 100 %> %</td>
+  </tr>
+</table>
+</center>
+<br>
+  <strong>REMARKS:</strong> <%= @form.remarks %><br>
+  <strong>DUCT SIZE:</strong> <%= @duct_size %> ft²<br>
+<br>
+
+  <strong><%= @form.title %><br>
+  <%= @form.street_address %><br>
+  <%= @form.city %>, <%= @form.state %> <%= @form.zip %></strong>
+
+
+<br>
+<%= link_to 'Edit', edit_form_path(@form) %> |
+<%= link_to 'Back', forms_path %> |
+<%= link_to 'PDF', form_path(@form, format: "pdf") %>

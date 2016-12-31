@@ -1,0 +1,297 @@
+<%= form_for(form) do |f| %>
+  <% if form.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(form.errors.count, "error") %> prohibited this form from being saved:</h2>
+
+      <ul>
+      <% form.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <!-- header -->
+
+  <div class="field">
+    <%= f.label :date %>
+    <%= f.text_field :date %>
+  </div>
+
+  <!-- kitchen hood data -->
+  <p>Kitchen Hood Data</p>
+
+  <div class="field">
+    <%= f.label :manufacturer %>
+    <%= f.text_field :manufacturer %>
+  </div>
+
+  <div class="field">
+    <%= f.label :model %>
+    <%= f.text_field :model %>
+  </div>
+
+  <div class="field">
+    <%= f.label :hood_size %>
+    <%= f.text_field :hood_size %>
+  </div>
+
+  <div class="field">
+    <%= f.label :location %>
+    <%= f.text_field :location %>
+  </div>
+
+  <p>Exhaust Section</p>
+
+  <div class="field">
+    <%= f.label :number_of_exhaust_filters %>
+    <%= f.text_field :number_of_exhaust_filters %>
+  </div>
+
+  <div class="field">
+    <%= f.label :e1 %>
+    <%= f.text_field :e1%>
+  </div>
+
+  <div class="field">
+    <%= f.label :e2 %>
+    <%= f.text_field :e2%>
+  </div>
+    
+  <div class="field">
+    <%= f.label :e3 %>
+    <%= f.text_field :e3%>
+  </div>
+  
+  <div class="field">
+    <%= f.label :e4 %>
+    <%= f.text_field :e4%>
+  </div>
+  
+  <div class="field">
+    <%= f.label :e5 %>
+    <%= f.text_field :e5%>
+  </div>
+  
+  <div class="field">
+    <%= f.label :e6 %>
+    <%= f.text_field :e6%>
+  </div>
+  
+  <div class="field">
+    <%= f.label :e7 %>
+    <%= f.text_field :e7%>
+  </div>
+
+  <div class="field">
+    <%= f.label :e8 %>
+    <%= f.text_field :e8%>
+  </div>
+    <div class="field">
+    <%= f.label :e9 %>
+    <%= f.text_field :e9%>
+  </div>
+  
+  <div class="field">
+    <%= f.label :e10 %>
+    <%= f.text_field :e10%>
+  </div>
+
+  <div class="field">
+    <%= f.label :e11 %>
+    <%= f.text_field :e11%>
+  </div>
+
+  <div class="field">
+    <%= f.label :e12 %>
+    <%= f.text_field :e12%>
+  </div>
+
+  <div class="field">
+    <%= f.label :e13 %>
+    <%= f.text_field :e13%>
+  </div>
+
+  <div class="field">
+    <%= f.label :e14 %>
+    <%= f.text_field :e14%>
+  </div>
+
+  <div class="field">
+    <%= f.label :e15 %>
+    <%= f.text_field :e15%>
+  </div>
+
+  <!-- < div class="field"> -->
+    <!-- < %= f.label :exhaust_test_velocities %> -->
+    <!-- < %= f.text_field :exhaust_test_velocities %> FPM -->
+  <!-- < /div> -->
+
+  <div class="field">
+    <%= f.label :exhaust_filter_size %>
+    <%= f.text_field :exhaust_filter_size_1 %> inches x <%= f.text_field :exhaust_filter_size_2 %> inches
+  </div>
+
+  <div class="field">
+    <%= f.label :exhaust_filter_manufacturer %>
+    <%= f.text_field :exhaust_filter_manufacturer %>
+  </div>
+
+  <!-- < div class="field"> -->
+    <!-- < %= f.label :exhaust_average_velocity %> -->
+    <!-- < %= f.text_field :exhaust_average_velocity %> -->
+  <!-- < /div> -->
+
+  <!-- < div class="field"> -->
+    <!-- < %= f.label :exhaust_filter_area %> -->
+    <!-- < %= f.text_field :exhaust_filter_area %> -->
+  <!-- < /div> -->
+
+  <div class="field">
+    <%= f.label :exhaust_filter_factor %>
+    <%= f.text_field :exhaust_filter_factor %>
+  </div>
+
+  <!-- supply section -->
+
+  <p>Supply Section</p>
+
+  <div class="field">
+    <%= f.label :number_of_supply_inputs %>
+    <%= f.text_field :number_of_supply_inputs  %>
+  </div>
+
+  <div class="field">
+    <%= f.label :s1 %>
+    <%= f.text_field :s1%>
+  </div>
+
+  <div class="field">
+    <%= f.label :s2 %>
+    <%= f.text_field :s2%>
+  </div>
+    
+  <div class="field">
+    <%= f.label :s3 %>
+    <%= f.text_field :s3%>
+  </div>
+  
+  <div class="field">
+    <%= f.label :s4 %>
+    <%= f.text_field :s4%>
+  </div>
+  
+  <div class="field">
+    <%= f.label :s5 %>
+    <%= f.text_field :s5%>
+  </div>
+  
+  <div class="field">
+    <%= f.label :s6 %>
+    <%= f.text_field :s6%>
+  </div>
+  
+  <div class="field">
+    <%= f.label :s7 %>
+    <%= f.text_field :s7%>
+  </div>
+
+  <div class="field">
+    <%= f.label :s8 %>
+    <%= f.text_field :s8%>
+  </div>
+    <div class="field">
+    <%= f.label :s9 %>
+    <%= f.text_field :s9%>
+  </div>
+  
+  <div class="field">
+    <%= f.label :s10 %>
+    <%= f.text_field :s10%>
+  </div>
+
+  <!-- < div class="field"> -->
+    <!-- < %= f.label :supply_test_velocities %> -->
+    <!-- < %= f.text_field :supply_test_velocities %> FPM -->
+  <!-- < /div> -->
+
+  <div class="field">
+    <%= f.label :supply_filter_size %>
+    <%= f.text_field :supply_filter_size_1 %> inches x <%= f.text_field :supply_filter_size_2 %> inches
+  </div>
+
+  <div class="field">
+    <%= f.label :supply_filter_manufacturer %>
+    <%= f.text_field :supply_filter_manufacturer %>
+  </div>
+
+  <!-- < div class="field"> -->
+    <!-- < %= f.label :supply_average_velocity%> -->
+    <!-- < %= f.text_field :supply_average_velocity%> -->
+  <!-- < /div> -->
+
+  <!-- < div class="field"> -->
+    <!-- < %= f.label :supply_opening_area %> -->
+    <!-- < %= f.text_field :supply_opening_area %> -->
+  <!-- </div> -->
+
+  <div class="field">
+    <%= f.label :supply_area_factor %>
+    <%= f.text_field :supply_area_factor %>
+  </div>
+
+  <div class="field">
+    <%= f.label :exhaust_design_data %>
+    <%= f.text_field :exhaust_design_data %> CFM
+  </div>
+
+  <div class="field">
+    <%= f.label :make_up_design_data %>
+    <%= f.text_field :make_up_design_data %> CFM
+  </div>
+
+
+
+  <!-- Client Info -->
+  <p>Client Info</p>
+
+  <div class="field">
+    <%= f.label :remarks %>
+    <%= f.text_field :remarks %>
+  </div>
+
+  <div class="field">
+    <%= f.label :duct_size %>
+    <%= f.text_field :duct_size_1 %> inches x <%= f.text_field :duct_size_2 %> inches
+  </div>
+
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :street_address %>
+    <%= f.text_field :street_address %>
+  </div>
+
+  <div class="field">
+    <%= f.label :city %>
+    <%= f.text_field :city %>
+  </div>
+
+  <div class="field">
+    <%= f.label :state %>
+    <%= f.text_field :state %>
+  </div>
+
+  <div class="field">
+    <%= f.label :zip %>
+    <%= f.text_field :zip %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
